@@ -1,27 +1,26 @@
 import React from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-type NavigationProps = {
+interface NavigationProps {
   onPrev: () => void;
   onNext: () => void;
-};
+}
 
 const Navigation: React.FC<NavigationProps> = ({ onPrev, onNext }) => {
   return (
-    <div className="flex justify-between items-center bg-blue-800 text-white p-2 mx-5">
+    <div className="flex justify-between mx-5 my-1">
       <button
         onClick={onPrev}
-        className="flex items-center space-x-1 bg-blue-700 px-3 py-1 rounded"
+        className="bg-gray-300 text-black px-4 py-2 rounded disabled:opacity-50"
+        disabled={onPrev === undefined}
       >
-        <FaChevronLeft />
-        <span>Navigator</span>
+        Previous
       </button>
       <button
         onClick={onNext}
-        className="flex items-center space-x-1 bg-blue-700 px-3 py-1 rounded"
+        className="bg-gray-300 text-black px-4 py-2 rounded disabled:opacity-50"
+        disabled={onNext === undefined}
       >
-        <span>Next</span>
-        <FaChevronRight />
+        Next
       </button>
     </div>
   );

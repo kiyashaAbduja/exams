@@ -3,7 +3,7 @@ import { FaPause } from "react-icons/fa";
 
 const ExamHeader: React.FC = () => {
   return (
-    <div className="flex justify-between items-center bg-blue-800 text-white p-2 mx-5">
+    <div className="flex justify-between items-center bg-blue-800 text-white p-2 mx-5 ">
       <div className="flex items-center">
         <span className="font-bold">
           Medical College Admission Test - Mark J
